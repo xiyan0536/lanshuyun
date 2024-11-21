@@ -1,0 +1,72 @@
+/* src/components/Banner.css */
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 100px 20px;
+  height: 100vh;
+  background-image: url('https://your-image-url.com');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  position: relative;
+}
+
+.banner h1 {
+  font-size: 4em;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 1.3em;
+  line-height: 1.6em;
+  max-width: 700px;
+  margin-top: 20px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.cursor {
+  margin-left: 5px;
+  animation: blink 0.7s step-end infinite;
+}
+
+@keyframes blink {
+  from, to { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.cta-button {
+  background-color: #00d4ff;
+  color: #0d0d0d;
+  border: none;
+  padding: 20px 50px;
+  font-size: 1.4em;
+  cursor: pointer;
+  margin-top: 40px;
+  border-radius: 30px;
+  transition: transform 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #00b3cc;
+  transform: scale(1.1);
+}
+
+.scroll-arrow {
+  position: absolute;
+  bottom: 20px;
+  font-size: 2em;
+  color: #00d4ff;
+  cursor: pointer;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(10px); }
+}

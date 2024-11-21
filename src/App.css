@@ -1,0 +1,69 @@
+/* src/App.css */
+
+/* 全局样式 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: Arial, sans-serif;
+  background-color: #0d0d0d;
+  color: #ffffff;
+  overflow-x: hidden;
+  height: 100%; /* 确保页面填满整个浏览器高度 */
+}
+
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* 确保 App 填满浏览器视窗 */
+}
+
+.App > * {
+  flex-shrink: 0;
+  width: 100%; /* 每个子模块宽度填满 */
+}
+
+/* 链接的全局样式 */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #00d4ff;
+}
+
+/* 按钮通用样式 */
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* 全局动画 */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .App h1 {
+    font-size: 3em;
+  }
+}

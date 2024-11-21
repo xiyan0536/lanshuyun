@@ -1,0 +1,148 @@
+/* src/components/ProductShowcase.css */
+
+.product-showcase {
+  padding: 120px 20px;
+  background: linear-gradient(135deg, #1e1e1e, #292929);
+  color: #ffffff;
+  text-align: center;
+}
+
+.product-showcase h2 {
+  font-size: 3em;
+  color: #00d4ff;
+  margin-bottom: 20px;
+  animation: fadeIn 1s ease;
+}
+
+.section-description {
+  font-size: 1.2em;
+  color: #bbbbbb;
+  margin-bottom: 50px;
+}
+
+.product-cards {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  max-width: 1400px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.product-card {
+  background: linear-gradient(145deg, #333333, #444444);
+  padding: 40px 20px;
+  border-radius: 20px;
+  width: 380px;
+  height: 280px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.4s, box-shadow 0.4s, background 0.4s;
+  animation: slideIn 1s ease forwards;
+  opacity: 0;
+}
+
+.product-card:hover {
+  transform: translateY(-10px) scale(1.1) rotate(1deg);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  background: linear-gradient(145deg, #3e3e3e, #505050);
+}
+
+.product-title {
+  font-size: 1.8em;
+  color: #00d4ff;
+  margin-bottom: 15px;
+  animation: fadeIn 0.8s ease forwards;
+}
+
+.product-description {
+  font-size: 1.1em;
+  color: #cccccc;
+  opacity: 0.85;
+  margin-top: 10px;
+  animation: fadeIn 1s ease forwards;
+}
+
+/* 美化的按钮样式 */
+.toggle-button {
+  margin-top: 30px;
+  padding: 12px 24px;
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #00d4ff;
+  background-color: transparent;
+  border: 2px solid #00d4ff;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.toggle-button:hover {
+  background-color: #00d4ff;
+  color: #ffffff;
+  transform: scale(1.05);
+  box-shadow: 0px 8px 16px rgba(0, 212, 255, 0.4);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .product-showcase h2 {
+    font-size: 2.3em;
+  }
+
+  .section-description {
+    font-size: 1.1em;
+  }
+
+  .product-cards {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .product-card {
+    width: 100%;
+    padding: 50px;
+  }
+
+  .toggle-button {
+    font-size: 1em;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-showcase h2 {
+    font-size: 1.8em;
+  }
+
+  .section-description {
+    font-size: 1em;
+  }
+
+  .toggle-button {
+    font-size: 0.9em;
+    padding: 8px 16px;
+  }
+}

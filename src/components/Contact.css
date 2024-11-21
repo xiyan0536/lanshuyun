@@ -1,0 +1,86 @@
+/* src/components/Contact.css */
+
+.contact {
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #1e1e1e, #292929); /* 静态渐变背景 */
+  color: #ffffff;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact h2 {
+  font-size: 3em;
+  color: #00d4ff;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.contact-description {
+  font-size: 1.2em;
+  color: #cccccc;
+  margin-bottom: 50px;
+}
+
+.contact-button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.contact-button {
+  display: inline-block;
+  padding: 15px 30px;
+  background: #00d4ff;
+  color: #1e1e1e;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.2s;
+  box-shadow: 0 5px 15px rgba(0, 212, 255, 0.3);
+}
+
+.contact-button:hover {
+  background: #00a3cc;
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 212, 255, 0.5);
+}
+
+.contact-button:active {
+  transform: scale(0.98);
+  box-shadow: 0 5px 15px rgba(0, 212, 255, 0.3);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .contact h2 {
+    font-size: 2.5em;
+  }
+
+  .contact-description {
+    font-size: 1em;
+  }
+
+  .contact-button {
+    font-size: 1em;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact h2 {
+    font-size: 2em;
+  }
+
+  .contact-description {
+    font-size: 0.9em;
+  }
+
+  .contact-button {
+    font-size: 0.9em;
+    padding: 8px 15px;
+  }
+}

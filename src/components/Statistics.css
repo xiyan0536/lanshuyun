@@ -1,0 +1,131 @@
+/* src/components/Statistics.css */
+
+.statistics {
+  padding: 120px 20px;
+  background: linear-gradient(135deg, #1e1e1e, #292929);
+  color: #ffffff;
+  text-align: center;
+}
+
+.statistics h2 {
+  font-size: 2.8em;
+  color: #00d4ff;
+  margin-bottom: 50px;
+  animation: fadeIn 1s ease;
+}
+
+.statistics-cards {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1400px; /* 增加最大宽度 */
+  margin: 0 auto;
+}
+
+.statistics-card {
+  background: linear-gradient(145deg, #333333, #444444);
+  padding: 60px;
+  border-radius: 15px;
+  width: 400px; /* 增加卡片宽度 */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+  text-align: center;
+  cursor: pointer;
+  animation: slideIn 1s ease forwards;
+  opacity: 0;
+}
+
+.statistics-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+  background: linear-gradient(145deg, #3e3e3e, #505050);
+}
+
+.statistics-card h3 {
+  font-size: 1.6em; /* 调整标题字体大小以防换行 */
+  color: #00d4ff;
+  margin-bottom: 15px;
+  animation: slideIn 0.8s ease forwards;
+  white-space: nowrap; /* 禁止换行 */
+}
+
+.statistics-card p {
+  font-size: 2.5em;
+  color: #ffffff;
+  font-weight: bold;
+  margin: 0;
+  animation: countFade 1.2s ease forwards;
+  transition: transform 0.3s ease, font-size 0.3s ease;
+}
+
+.statistics-card p.hover-enlarge:hover {
+  font-size: 3.2em; /* 放大后的字体大小 */
+  color: #00d4ff; /* 改变颜色以增加视觉效果 */
+  text-shadow: 0 0 10px rgba(0, 212, 255, 0.7);
+}
+
+/* 动画 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes countFade {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .statistics h2 {
+    font-size: 2.3em;
+  }
+
+  .statistics-cards {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .statistics-card {
+    width: 100%;
+    padding: 40px;
+  }
+
+  .statistics-card h3 {
+    font-size: 1.6em;
+  }
+
+  .statistics-card p {
+    font-size: 2.2em;
+  }
+}
+
+@media (max-width: 480px) {
+  .statistics h2 {
+    font-size: 1.8em;
+  }
+
+  .statistics-card p {
+    font-size: 2em;
+  }
+}
